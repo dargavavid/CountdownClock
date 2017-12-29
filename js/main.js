@@ -12,3 +12,11 @@ function setCountdownStart() {
 function getCountdownStart() {
     return parseInt(window.localStorage.getItem("countdown-start"));
 }
+
+function setCountdownInterval(interval) {
+    window.localStorage.setItem("countdown-interval", interval);
+}
+
+function getCountdownInterval() {
+    return parseInt(window.localStorage.getItem("countdown-interval"));
+}
