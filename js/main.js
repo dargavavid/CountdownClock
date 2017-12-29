@@ -8,3 +8,7 @@ function setCountdownStart() {
     const now = Date.now();
     window.localStorage.setItem("countdown-start", now);
 }
+
+function getCountdownStart() {
+    return parseInt(window.localStorage.getItem("countdown-start"));
+}
