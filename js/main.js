@@ -20,3 +20,8 @@ function setCountdownInterval(interval) {
 function getCountdownInterval() {
     return parseInt(window.localStorage.getItem("countdown-interval"));
 }
+
+function formatTime(num) {
+    return num > 9 ? "" + num : num > 0 ? "0" + num : "00";
+}
+
