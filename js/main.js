@@ -39,3 +39,10 @@ function updateClock(start, interval) {
     minutesDiv.innerText = formatTime(minutes);
     secondsDiv.innerText = formatTime(seconds);
 }
+
+function initClock() {
+    setInterval(function () {
+        let countdownStart = getCountdownStart(), countdownInterval = getCountdownInterval();
+        updateClock(countdownStart, 10000000);
+    }, 1000);
+}
