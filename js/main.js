@@ -25,3 +25,17 @@ function formatTime(num) {
     return num > 9 ? "" + num : num > 0 ? "0" + num : "00";
 }
 
+function updateClock(start, interval) {
+    const now = Date.now();
+    const remaining = interval - (now - start);
+
+    const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(remaining / (1000 * 60 * 60)) % 24;
+    const minutes = Math.floor(remaining / (1000 * 60)) % 60;
+    const seconds = Math.floor(remaining / 1000) % 60;
+
+    daysDiv.innerText = formatTime(days);
+    hoursDiv.innerText = formatTime(hours);
+    minutesDiv.innerText = formatTime(minutes);
+    secondsDiv.innerText = formatTime(seconds);
+}
